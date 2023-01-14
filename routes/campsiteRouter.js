@@ -23,5 +23,5 @@ campsiteRouter.route('/')
   .delete((req, res) => {
     res.end("Deleting all campsites");
   });
-  
+
 module.exports = campsiteRouter
