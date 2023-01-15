@@ -1,8 +1,8 @@
 const express = require("express");
 
-const promotionsRouter = express.Router();
+const promotionRouter = express.Router();
 
-promotionsRouter
+promotionRouter
 
   .route("/")
   .all((req, res, next) => {
@@ -26,7 +26,7 @@ promotionsRouter
     res.end("Deleting all promotions");
   });
 
-promotionsRouter
+  promotionRouter
   .route("/:promotionId")
   .all((req, res, next) => {
     res.statusCode = 200;
@@ -56,4 +56,4 @@ promotionsRouter
     res.end(`Deleting promotion: ${req.params.promotionId}`);
   });
 
-module.exports = promotionsRouter;
+module.exports = promotionRouter;

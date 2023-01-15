@@ -1,8 +1,8 @@
 const express = require("express");
 
-const campsitesRouter = express.Router();
+const campsiteRouter = express.Router();
 
-campsitesRouter
+campsiteRouter
   .route("/")
   .all((req, res, next) => {
     res.statusCode = 200;
@@ -25,7 +25,7 @@ campsitesRouter
     res.end("Deleting all campsites");
   });
 
-campsitesRouter
+campsiteRouter
   .route("/:campsiteId")
   .all((req, res, next) => {
     res.statusCode = 200;
@@ -55,4 +55,4 @@ campsitesRouter
     res.end(`Deleting campsite: ${req.params.campsiteId}`);
   });
 
-module.exports = campsitesRouter;
+module.exports = campsiteRouter;
